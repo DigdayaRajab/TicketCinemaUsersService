@@ -59,7 +59,7 @@ public class LoginController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @PostMapping("/api/auth/signin")
+    @PostMapping("/api/user/signin")
     public ResponseEntity authenticateUser(@Valid @RequestBody Map<String, Object> login) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(login.get("username"), login.get("password"))
